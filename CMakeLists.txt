@@ -1,23 +1,15 @@
-cmake_minimum_required(VERSION 2.4.6)
-include($ENV{ROS_ROOT}/core/rosbuild/rosbuild.cmake)
+cmake_minimum_required(VERSION 2.8.3)
+project(microstrain_3dm_gx3_45)
 
-# Set the build type.  Options are:
-#  Coverage       : w/ debug symbols, w/o optimization, w/ code-coverage
-#  Debug          : w/ debug symbols, w/o optimization
-#  Release        : w/o debug symbols, w/ optimization
-#  RelWithDebInfo : w/ debug symbols, w/ optimization
-#  MinSizeRel     : w/o debug symbols, w/ optimization, stripped binaries
-set(ROS_BUILD_TYPE RelWithDebInfo)
+find_package(catkin REQUIRED COMPONENTS roscpp sensor_msgs tf geometry_msgs)
 
-rosbuild_init()
+catkin_package()
 
-#set the default path for built executables to the "bin" directory
-set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
-set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
+include_directories(include ${catkin_INCLUDE_DIRS})
 
-rosbuild_add_boost_directories()
+add_library(3dmgx3_45 src/driver.cpp)
 
-rosbuild_add_library(3dmgx3_45 src/driver.cpp)
+add_executable(imu_driver src/node.cpp)
+target_link_libraries(imu_driver 3dmgx3_45 ${catkin_LIBRARIES})
 
-rosbuild_add_executable(imu_driver src/node.cpp)
-target_link_libraries(imu_driver 3dmgx3_45)
+roslaunch_add_file_check(launch)
