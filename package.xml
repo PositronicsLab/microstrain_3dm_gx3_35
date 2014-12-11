@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package>
-  <name>microstrain_3dm_gx3_45</name>
+  <name>microstrain_3dm_gx3_35</name>
   <version>0.0.0</version>
-  <description>microstrain_3dm_gx3_45</description>
+  <description>microstrain_3dm_gx3_35</description>
 
   <maintainer email="code@clearpathrobotics.com" />
   <author email="imaterna@fit.vutbr.cz">Zdenek Materna</author>
