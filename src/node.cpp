@@ -1,8 +1,8 @@
 #include "ros/ros.h"
-#include "microstrain_3dm_gx3_45/driver.h"
-#include "microstrain_3dm_gx3_45/node.h"
+#include "microstrain_3dm_gx3_35/driver.h"
+#include "microstrain_3dm_gx3_35/node.h"
 
-using namespace microstrain_3dm_gx3_45;
+using namespace microstrain_3dm_gx3_35;
 using namespace std;
 using namespace boost;
 using namespace ros;
@@ -37,7 +37,7 @@ imuNode::imuNode() : nh_priv_("~") {
 	param::param("~orientation_stdev", orientation_stdev_, 0.035);
 	param::param("~angular_velocity_stdev", angular_velocity_stdev_, 0.012);
 	
-	imu_.reset(new IMU((int)floor(rate_),microstrain_3dm_gx3_45::IMU::GX3_35));
+	imu_.reset(new IMU((int)floor(rate_),microstrain_3dm_gx3_35::IMU::GX3_35));
 
 	started_ = false;
 	inited_ = false;

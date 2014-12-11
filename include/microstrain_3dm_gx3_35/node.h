@@ -13,7 +13,7 @@
 #ifndef NODE_H_
 #define NODE_H_
 
-namespace microstrain_3dm_gx3_45 {
+namespace microstrain_3dm_gx3_35 {
 
 class imuNode {
 

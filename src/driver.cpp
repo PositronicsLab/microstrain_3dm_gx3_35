@@ -1,10 +1,10 @@
-#include "microstrain_3dm_gx3_45/driver.h"
+#include "microstrain_3dm_gx3_35/driver.h"
 
 #include <algorithm>
 #include <iostream>
 #include <boost/bind.hpp>
 
-using namespace microstrain_3dm_gx3_45;
+using namespace microstrain_3dm_gx3_35;
 using namespace std;
 using namespace boost;
 

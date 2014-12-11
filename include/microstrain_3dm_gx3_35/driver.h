@@ -1,5 +1,5 @@
-#ifndef MS_3DMGX3_45_HH
-#define MS_3DMGX3_45_HH
+#ifndef MS_3DMGX3_35_HH
+#define MS_3DMGX3_35_HH
 
 #include <iostream>
 #include <boost/asio/serial_port.hpp> 
@@ -24,7 +24,7 @@
  *
  */
 
-namespace microstrain_3dm_gx3_45 {
+namespace microstrain_3dm_gx3_35 {
 
 	typedef std::vector<char> tbyte_array;
 
@@ -229,7 +229,7 @@ namespace microstrain_3dm_gx3_45 {
 
     models model_;
     
-      IMU(int rate, models model=microstrain_3dm_gx3_45::IMU::GX3_35);
+      IMU(int rate, models model=microstrain_3dm_gx3_35::IMU::GX3_35);
 
       bool openPort(std::string port, unsigned int baud_rate, boost::asio::serial_port_base::parity opt_parity=
               boost::asio::serial_port_base::parity(
