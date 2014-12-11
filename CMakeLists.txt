@@ -5,7 +5,7 @@ find_package(catkin REQUIRED COMPONENTS roscpp sensor_msgs tf geometry_msgs)
 
 catkin_package()
 
-include_directories(inclu35 ${catkin_INCLUDE_DIRS})
+include_directories(include ${catkin_INCLUDE_DIRS})
 
 add_library(3dmgx3_35 src/driver.cpp)
 
