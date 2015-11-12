@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(microstrain_3dm_gx3_35)
 
-find_package(catkin REQUIRED COMPONENTS roscpp sensor_msgs tf geometry_msgs)
+find_package(catkin REQUIRED COMPONENTS roscpp sensor_msgs tf geometry_msgs roslaunch)
 
 catkin_package()
 
